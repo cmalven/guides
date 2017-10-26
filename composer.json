@@ -1,6 +1,6 @@
 {
 	"name": "cmalven/guides",
-	"description": "An easy way to provide in-admin documentation.",
+	"description": "An easy way to provide documentation in the Craft CMS control panel.",
 	"type": "craft-plugin",
 	"authors": [
 		{
