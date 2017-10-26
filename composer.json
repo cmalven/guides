@@ -1,14 +1,15 @@
 {
-	"name": "cmalven/guides",
-	"description": "An easy way to provide documentation in the Craft CMS control panel.",
-	"type": "craft-plugin",
-	"authors": [
-		{
-			"name": "Chris Malven",
-			"homepage": "http://malven.co"
-		}
-	],
-	"require": {
-		"composer/installers": "~1.0"
-	}
+  "name": "cmalven/guides",
+  "description": "An easy way to provide documentation in the Craft CMS control panel.",
+  "license": "MIT",
+  "type": "craft-plugin",
+  "authors": [
+    {
+      "name": "Chris Malven",
+      "homepage": "http://malven.co"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  }
 }

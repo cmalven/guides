@@ -14,5 +14,13 @@
         "notes": [
             "[Changed] Remove references to unused plugin styles and scripts"
         ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/cmalven/guides/archive/master.zip",
+        "date": "2017-10-26T20:20:37.699Z",
+        "notes": [
+            "[Added] MIT license in composer.json"
+        ]
     }
 ]

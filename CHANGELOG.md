@@ -8,4 +8,8 @@
 ### Changed
 - Remove references to unused plugin styles and scripts
 
+## 1.0.2 -- 2017-10-26
+### Added
+- MIT license in composer.json
+
 Brought to you by [Chris Malven](http://malven.co)
