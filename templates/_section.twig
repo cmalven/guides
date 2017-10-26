@@ -1,0 +1,48 @@
+{% extends "_layouts/cp" %}
+
+{% set title = 'Guides' %}
+
+{% set section = craft.entries().section(craft.guides.getSectionHandle()).slug(craft.request.lastSegment).first %}
+
+{% if not section %}
+  {% exit 404 %}
+{% endif %}
+
+{% block sidebar %}
+  {% include 'guides/_partials/nav.twig' %}
+{% endblock %}
+
+{% set content %}
+  {# Stylesheet #}
+  {% set stylesheetPath = craft.guides.getStylesheetPath() %}
+  {% if stylesheetPath | length %}
+    {% includeCssFile (siteUrl | trim('/', 'right')) ~ '/' ~ (stylesheetPath | trim('/', 'left')) %}
+  {% endif %}
+
+  {# External Script #}
+  {% set externalScriptUrl = craft.guides.getExternalScriptUrl() %}
+  {% if externalScriptUrl | length %}
+    {% includeJsFile externalScriptUrl %}
+  {% endif %}
+
+  {# External Stylesheet #}
+  {% set externalStylesheetUrl = craft.guides.getExternalStylesheetUrl() %}
+  {% if externalStylesheetUrl | length %}
+    {% includeCssFile externalStylesheetUrl %}
+  {% endif %}
+
+  <section class="guide-plugin-content">
+    {% set fields = section.getFieldLayout().getFields() %}
+    {% for fieldLayoutField in fields %}
+      {% set fieldType = fieldLayoutField.field.fieldType.name %}
+      {% set field = craft.fields.getFieldById(fieldLayoutField.fieldId) %}
+      {% set fieldContent = section.getContent()[field.handle] %}
+      {% if fieldType == 'Plain Text' %}
+        {{ fieldContent | markdown }}
+      {% endif %}
+      {% if fieldType == 'Rich Text' %}
+        {{ fieldContent | raw }}
+      {% endif %}
+    {% endfor %}
+  </section>
+{% endset %}

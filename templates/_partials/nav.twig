@@ -1,0 +1,10 @@
+{% set guideSections = craft.entries().section('guides') %}
+
+<nav>
+  <ul>
+    {% for section in guideSections %}
+      {% set isCurrent = craft.request.lastSegment == section.slug %}
+      <li><a class="{{ isCurrent ? 'sel' }} {{ loop.last ? 'last' }}" href="/admin/guides/sections/{{ section.slug }}">{{ section.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

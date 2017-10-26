@@ -1,0 +1,14 @@
+{
+	"name": "cmalven/guides",
+	"description": "An easy way to provide in-admin documentation.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Chris Malven",
+			"homepage": "http://malven.co"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

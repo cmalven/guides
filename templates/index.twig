@@ -1,0 +1,7 @@
+{% extends "_layouts/cp" %}
+
+{% set guideSections = craft.entries().section('guides') %}
+
+{% set content %}
+  {% redirect '/admin/guides/sections/' ~ guideSections[0].slug %}
+{% endset %}

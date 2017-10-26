@@ -1,0 +1,50 @@
+{#
+/**
+ * Guides plugin for Craft CMS
+ *
+ * Guides Settings.twig
+ *
+ * @author    Chris Malven
+ * @copyright Copyright (c) 2017 Chris Malven
+ * @link      http://malven.co
+ * @package   Guides
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% includeCssResource "guides/css/Guides_Style.css" %}
+{% includeJsResource "guides/js/Guides_Script.js" %}
+
+{{ forms.textField({
+    label: 'Section Handle',
+    instructions: 'The handle for the Channel section that content will be pulled from. This section should _not_ have `Entries in this section have their own URLs` checked and should include a single field with a handle of `guideContent`, and a type of 1) `Plain Text` (with `Allow line breaks` checked) or B) `Rich Text`. If the field type is `Plain Text`, this field will be processed as markdown.',
+    id: 'sectionHandle',
+    name: 'sectionHandle',
+    value: settings['sectionHandle']})
+}}
+
+{{ forms.textField({
+    label: 'Stylesheet Path',
+    instructions: 'Path to a stylesheet you can use if want to style the guide contents. Path is relative to your siteUrl. The stylesheet contents should typically be scoped to a `.guide-plugin-content` element so you don’t accidentally disturbed the Craft CP styles.',
+    id: 'stylesheetPath',
+    name: 'stylesheetPath',
+    value: settings['stylesheetPath']})
+}}
+
+{{ forms.textField({
+    label: 'External Script URL',
+    instructions: 'Useful if you need to include an external script, such as a webfont service.',
+    id: 'externalScriptUrl',
+    name: 'externalScriptUrl',
+    value: settings['externalScriptUrl']})
+}}
+
+{{ forms.textField({
+    label: 'External Stylsheet URL',
+    instructions: 'Useful if you need to include an external stylesheet, such as a webfont service.',
+    id: 'externalStylesheetUrl',
+    name: 'externalStylesheetUrl',
+    value: settings['externalStylesheetUrl']})
+}}
