@@ -1,6 +1,6 @@
 # Guides plugin for Craft CMS
 
-An easy way to provide documentation in the Craft control panel.
+An easy way to provide documentation in the Craft CMS control panel.
 
 ---
 
