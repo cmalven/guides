@@ -12,4 +12,8 @@
 ### Added
 - MIT license in composer.json
 
+## 1.0.3 -- 2017-11-07
+### Added
+- Correct version in plugin
+
 Brought to you by [Chris Malven](http://malven.co)

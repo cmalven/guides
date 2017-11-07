@@ -22,5 +22,13 @@
         "notes": [
             "[Added] MIT license in composer.json"
         ]
+    },
+    {
+        "version": "1.0.3",
+        "downloadUrl": "https://github.com/cmalven/guides/archive/master.zip",
+        "date": "2017-11-07T20:20:37.699Z",
+        "notes": [
+            "[Added] Added correct version to plugin."
+        ]
     }
 ]
